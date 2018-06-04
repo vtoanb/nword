@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: 'hashing#index'
+  root to: 'words#show'
   get '/w', to: 'words#show'
 end

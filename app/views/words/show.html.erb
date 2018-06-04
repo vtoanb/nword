@@ -1,3 +1,4 @@
+<div class='card'>
 <% if @word.traditional %>
   <h1><%= "#{@word.traditional}-#{@word.simplified}" %></h1>
 <% else %>
@@ -5,4 +6,5 @@
 <% end %>
 <p><%= @word.try(:pinyin) %> </p>
 <p><%= @word.try(:definition) || 'no definition found' %> </p>
-<%= link_to 'Reload', w_url %>
+<%= link_to 'Reload', w_url, class: 'button success' %>
+</div>
