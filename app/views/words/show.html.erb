@@ -1,10 +1,12 @@
-<div class='card'>
+<div class="row medium-12 large-12">
 <% if @word.traditional %>
-  <h1><%= "#{@word.traditional}-#{@word.simplified}" %></h1>
+  <h1 class="text-center"><%= "#{@word.traditional}-#{@word.simplified}" %></h1>
 <% else %>
-  <h1><%= @word.try(:simplified) %></h1>
+  <h1 class="text-center"><%= @word.try(:simplified) %></h1>
 <% end %>
-<p><%= @word.try(:pinyin) %> </p>
-<p><%= @word.try(:definition) || 'no definition found' %> </p>
-<%= link_to 'Reload', w_url, class: 'button success' %>
+<p class="text-center"><%= @word.try(:pinyin) %> </p>
+<p class="text-center"><%= @word.try(:definition) || 'no definition found' %> </p>
+  <div class="columns small-centered text-center">
+    <%= link_to 'Reload', root_path, class: "button success [radius round]" %>
+  </div>
 </div>
