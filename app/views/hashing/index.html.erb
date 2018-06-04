@@ -1,3 +1,3 @@
-<% %w(1 2 3 4 5 vuvantoan 6 7 8 9).each do |key| %>
-  <p><%= Digest::MD5.hexdigest(key) %></p>
+<% @hashes.each do |key| %>
+  <p><%= hash(key) %></p>
 <% end %>
