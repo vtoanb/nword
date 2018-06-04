@@ -45,3 +45,4 @@ production:
   database: hashing_app_production
   username: hashingapp
   password: <%= ENV['PG_PASSWD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
