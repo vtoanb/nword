@@ -1,7 +1,8 @@
 <% if @word.traditional %>
-  <h1><%= @word.traditional %></h1>
+  <h1><%= "#{@word.traditional}-#{@word.simplified}" %></h1>
 <% else %>
-  <h2><%= @word.try(:simplified) %></h2>
+  <h1><%= @word.try(:simplified) %></h1>
 <% end %>
 <p><%= @word.try(:pinyin) %> </p>
 <p><%= @word.try(:definition) || 'no definition found' %> </p>
+<%= link_to 'Reload', w_url %>
